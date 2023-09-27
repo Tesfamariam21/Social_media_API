@@ -1,18 +1,13 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-
+const Login = require('../middelware/login');
+const SignUp = require('../middelware/signup');
 
 const router =express.Router();
 
-router.post('/signup', async ()=>{
+router.route('/signup').post(Login);
 
-});
+router.route('/login').post(SignUp);
 
-router.post('/login', async ()=>{
-
-});
-dsf
 
 
 module.exports = router;
