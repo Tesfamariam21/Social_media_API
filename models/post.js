@@ -19,6 +19,9 @@ const PostSchema = mongoose.Schema({
     timestamp:{
         type: Date,
         default: Date.now
+    },
+    interactions:{
+        type: Object
     }
 });
 
