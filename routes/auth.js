@@ -1,9 +1,9 @@
 const express = require('express');
-const Login = require('../middelware/login');
-const SignUp = require('../middelware/signup');
-const Logout = require('../middelware/logout');
-const Revoked = require('../middelware/revoked');
-const authenticated = require('../middelware/authenticated');
+const Login = require('../middelware/authentication/login');
+const SignUp = require('../middelware/authentication/signup');
+const Logout = require('../middelware/authentication/logout');
+const Revoked = require('../middelware/authentication/revoked');
+const authenticated = require('../middelware/authentication/authenticated');
 
 const router =express.Router();
 
