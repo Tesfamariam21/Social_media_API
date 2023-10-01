@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
 
-const Secratekey = process.env.secrate_key
+const Secratekey = process.env.secrate_key;
 
 const Login = async (req, res)=>{
     try{
