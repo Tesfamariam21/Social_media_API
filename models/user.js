@@ -20,7 +20,7 @@ const UserSchema = mongoose.Schema({
     },
     bio:{
         type:String,
-    }
+    },
 });
 
 const User = mongoose.model('User', UserSchema);
