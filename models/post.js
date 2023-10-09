@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = require('./user');
+const Comment = require('../models/comment');
 
 
 const PostSchema = mongoose.Schema({
@@ -21,7 +21,20 @@ const PostSchema = mongoose.Schema({
         default: Date.now
     },
     interactions:{
-        type: Object
+        likes:{
+            type: Number,
+            default: 0
+        },
+        comments:{
+            type: Number,
+            default:0
+        },
+        share:{
+            type: Number,
+            default: 0
+        }
+        
+
     }
 });
 
