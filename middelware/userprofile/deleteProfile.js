@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../../models/user');
 
 const DeleteProfile = async (req,res)=>{
     try{

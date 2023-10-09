@@ -1,4 +1,4 @@
-const RevokedToken = require('../models/revokedToken');
+const RevokedToken = require('../../models/revokedToken');
 
 const Revoked = async (req, res, next)=>{
     try{

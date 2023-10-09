@@ -1,4 +1,4 @@
-const RevokedToken = require('../models/revokedToken');
+const RevokedToken = require('../../models/revokedToken');
 
 const Logout = async (req,res)=>{
     try{
