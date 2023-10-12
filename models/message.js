@@ -21,12 +21,7 @@ const MessageSchema = mongoose.Schema({
     },
     mediaPath:{
         type: String
-    },
-    message_status:{
-        type: String,
-        enum:['seen', 'unseen']
-    }
-    
+    } 
 });
 
 const Message = mongoose.model('Message', MessageSchema);

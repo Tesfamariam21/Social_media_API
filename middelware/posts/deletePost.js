@@ -8,7 +8,7 @@ const DeletePost = async (req, res)=>{
         if(!posts){
             return res.status(404).json({error: "Post not found"});
         }
-        res.json({message: "Successfully Deleted!"})
+        res.json({message: "Successfully Deleted!"});
     }catch(error){
         return res.status(501).json({error: "Server error"});
     }
