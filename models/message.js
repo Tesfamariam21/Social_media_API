@@ -9,7 +9,7 @@ const MessageSchema = mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'User'
     },
-    tiemstamp:{
+    timestamp:{
         type: Date,
         default: Date.now
     },
