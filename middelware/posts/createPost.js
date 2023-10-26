@@ -1,14 +1,24 @@
 const Post = require('../../models/post');
+const multer = require('multer');
+const upload = multer({dest: '../../uploads'});
 
 const CreateNewPost = (req,res)=>{
     try{
         const user_id= req.user.user_id;
-        const {post_text, mediapath} = req.body;
+        const {post_text} = req.body;
+        upload.single('file')(req,res,(err)={
+            if(err){
+                return res.satus(400).json({error: err.message});
+            }
+        });
+
+        const mediapath = req.file.path;
+        
         let post_type;
         if(post_text){
-            post_type = "media"
-        }else if (mediapath){
             post_type = "text"
+        }else if (mediapath){
+            post_type = "media"
         }else{
             return res.status(400).json({error: "Either text or media must be provided"});
         }
